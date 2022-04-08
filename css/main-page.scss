@@ -1,0 +1,309 @@
+body {
+    margin: 1.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url('../img/WallpaperImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+}
+
+.logo-txt {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+
+    span {
+        color: tomato;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 3em;
+        cursor: pointer;
+    }
+
+    nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: white;
+        height: 100vh;
+        width: 50%;
+        z-index: 999;
+        text-transform: uppercase;
+        transform: translateX(100%);
+        transition: transform .5s ease-in-out;
+
+        .close {
+            float: right;
+            margin: 2em;
+            width: 2.5em;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 8em;
+
+            a {
+                font-weight: 600;
+                color: black;
+                padding: .75em 2em;
+                display: block;
+
+                &:hover {
+                    background: rgb(235, 235, 235);
+                }
+            }
+
+        }
+    }
+}
+
+.allreadyhere {
+    transform: translateX(0);
+}
+
+section.hero {
+    color: #fff;
+    height: 90vh;
+
+    h1 {
+        font-size: 3rem;
+        margin-top: 2em;
+        line-height: 3.3rem;
+    }
+
+    .down-arrow {
+        stroke: white;
+        fill: white;
+        position: absolute;
+        bottom: 2em;
+    }
+
+    .subhead {
+        font-size: 1.4rem;
+    }
+}
+
+section.more-info {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 11em;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .des {
+        line-height: 1.5rem;
+    }
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+
+    footer {
+        font-weight: bold;
+        text-align: center;
+        padding: 0.85rem 0;
+
+        span {
+            color: black;
+        }
+    }
+}
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: white;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+@media screen and(min-width: 680px) {
+    body {
+        margin: 1.5em 5em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+@media screen and(min-width: 983px) {
+    .hamburger {
+        display: none;
+    }
+    .hero{
+        svg{
+            position: absolute;
+            left: 10%;
+            margin-bottom: 15%;
+            bottom: 1000px;
+            stroke: black;
+            path {
+                fill: black;
+            }
+        }
+    }
+    header nav {
+        position: relative;
+        transform: translateX(0);
+        display: block;
+        height: auto;
+        width: auto;
+        background: none;
+
+        .close {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            margin: 0;
+
+            li {
+                a {
+                    color: #fff;
+                    padding: .5em 1.5em;
+                    font-size: .9rem;
+
+                    &:hover {
+                        background: none;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-img {
+        background: url('../img/WallpaperImg\ -PC.jpg');
+        background-repeat: no-repeat;
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 55vh;
+    }
+
+    .logo-txt {
+        color: black;
+    }
+
+    .hero {
+        height: auto;
+        width: 40%;
+        margin-bottom: 8em;
+
+        h1 {
+            color: black;
+        }
+
+        .subhead {
+            color: black;
+        }
+    }
+    .more-info{
+        margin-top: -20rem;
+    }
+    .feature{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        gap: 3em;
+        margin-bottom: 8em;
+        img {
+            width: 35em;
+        }
+        .content {
+            text-align: right;
+            width: 25em;
+            position: relative;
+            left: 10%;
+        }
+    }
+    .feature.left{
+        grid-template-areas: "left right";
+        img {
+            grid-area: left;
+        }
+        .content{
+            text-align: left;
+            position: relative;
+            left: 45%;
+            width: 25em;
+            justify-self: left;
+        }
+    }
+}
+@media screen and(min-width: 1200px) {
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .feature{
+        gap: 0;
+    }
+}
