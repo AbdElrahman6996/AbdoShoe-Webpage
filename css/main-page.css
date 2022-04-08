@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+body {
+  margin: 1.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/WallpaperImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 30%;
+}
+
+.logo-txt {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo-txt span {
+  color: tomato;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+header img {
+  width: 3em;
+  cursor: pointer;
+}
+
+header nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  text-transform: uppercase;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+header nav .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
+  cursor: pointer;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8em;
+}
+
+header nav ul a {
+  font-weight: 600;
+  color: black;
+  padding: .75em 2em;
+  display: block;
+}
+
+header nav ul a:hover {
+  background: #ebebeb;
+}
+
+.allreadyhere {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+section.hero {
+  color: #fff;
+  height: 90vh;
+}
+
+section.hero h1 {
+  font-size: 3rem;
+  margin-top: 2em;
+  line-height: 3.3rem;
+}
+
+section.hero .down-arrow {
+  stroke: white;
+  fill: white;
+  position: absolute;
+  bottom: 2em;
+}
+
+section.hero .subhead {
+  font-size: 1.4rem;
+}
+
+section.more-info img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 11em;
+}
+
+section.more-info .title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+section.more-info .des {
+  line-height: 1.5rem;
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.footer footer {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.85rem 0;
+}
+
+.footer footer span {
+  color: black;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow
+
+/*Safari and Chrome*/
+  {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */
+}
+
+@media screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@media screen and (min-width: 983px) {
+  .hamburger {
+    display: none;
+  }
+
+  .hero svg {
+    position: absolute;
+    left: 10%;
+    margin-bottom: 15%;
+    bottom: 1000px;
+    stroke: black;
+  }
+
+  .hero svg path {
+    fill: black;
+  }
+
+  header nav {
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    display: block;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+
+  header nav .close {
+    display: none;
+  }
+
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+
+  header nav ul li a {
+    color: #fff;
+    padding: .5em 1.5em;
+    font-size: .9rem;
+  }
+
+  header nav ul li a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+
+  .hero-img {
+    background: url("../img/WallpaperImg -PC.jpg");
+    background-repeat: no-repeat;
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 55vh;
+  }
+
+  .logo-txt {
+    color: black;
+  }
+
+  .hero {
+    height: auto;
+    width: 40%;
+    margin-bottom: 8em;
+  }
+
+  .hero h1 {
+    color: black;
+  }
+
+  .hero .subhead {
+    color: black;
+  }
+
+  .more-info {
+    margin-top: -20rem;
+  }
+
+  .feature {
+    display: -ms-grid;
+    display: grid;
+    margin-bottom: 8em;
+    gap: 3em;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .feature img {
+    width: 35em;
+  }
+
+  .feature .content {
+    text-align: right;
+    width: 25em;
+    position: relative;
+    left: 10%;
+  }
+
+  .feature.left {
+    grid-template-areas: "left right";
+  }
+
+  .feature.left img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+
+  .feature.left .content {
+    text-align: left;
+    position: relative;
+    left: 45%;
+    width: 25em;
+    -ms-grid-column-align: left;
+    justify-self: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature {
+    gap: 0;
+  }
+}
+
+/*# sourceMappingURL=main-page.css.map */
